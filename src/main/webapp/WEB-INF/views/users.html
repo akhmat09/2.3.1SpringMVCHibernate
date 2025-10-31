@@ -40,8 +40,8 @@
                 <input type="hidden" name="id" th:value="${user.id}">
                 <button type="submit" class="btn btn-edit">Edit</button>
             </form>
-            <form th:action="@{/delete}" method="post" onsubmit="return confirm('Are you sure you want to delete this user?')">
-                <input type="hidden" name="id" th:value="${user.id}">
+            <form th:action="@{/delete/{id}(id=${user.id})}" method="post"
+                  onsubmit="return confirm('Are you sure you want to delete this user?')">
                 <button type="submit" class="btn btn-delete">Delete</button>
             </form>
         </td>
